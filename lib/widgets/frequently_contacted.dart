@@ -1,0 +1,67 @@
+import 'package:chat_ui/models/message_model.dart';
+import 'package:flutter/material.dart';
+
+class FrequentlyContacted extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 0.0),
+      child: Column(
+        children: <Widget>[
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text('Favourites',
+                    style: TextStyle(
+                      color: Colors.blueGrey,
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.0,
+                    )),
+                IconButton(
+                  icon: Icon(Icons.more_horiz),
+                  iconSize: 30.0,
+                  color: Colors.blueGrey,
+                  onPressed: () {},
+                )
+              ],
+            ),
+          ),
+          Container(
+            height: 80.0,
+            child: ListView.builder(
+                padding: EdgeInsets.only(left: 10.0),
+                scrollDirection: Axis.horizontal,
+                itemCount: favorites.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return Padding(
+                    padding: const EdgeInsets.only(right: 15.0),
+                    child: Column(
+                      children: <Widget>[
+                        CircleAvatar(
+                          radius: 27.0,
+                          backgroundImage:
+                              AssetImage(favorites[index].imageUrl),
+                        ),
+                        SizedBox(
+                          height: 3.0,
+                        ),
+                        Text(
+                          favorites[index].name,
+                          style: TextStyle(
+                              color: Colors.blueGrey,
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.w600),
+                        ),
+                      ],
+                    ),
+                  );
+                }),
+          )
+        ],
+      ),
+    );
+  }
+}

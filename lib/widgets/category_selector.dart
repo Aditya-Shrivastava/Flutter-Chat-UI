@@ -24,7 +24,7 @@ class _CategorySelectorState extends State<CategorySelector> {
                 });
               },
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 30.0),
+                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 25.0),
                 child: Text(categories[index],
                     style: TextStyle(
                         color: index == selectedIndex

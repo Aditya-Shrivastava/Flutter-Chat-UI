@@ -1,4 +1,5 @@
 import 'package:chat_ui/widgets/category_selector.dart';
+import 'package:chat_ui/widgets/frequently_contacted.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.menu),
-          iconSize: 30.0,
+          iconSize: 20.0,
           color: Colors.white,
           onPressed: () {},
         ),
@@ -30,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.search),
-            iconSize: 30.0,
+            iconSize: 20.0,
             color: Colors.white,
             onPressed: () {},
           ),
@@ -48,6 +49,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   topRight: Radius.circular(30.0),
                 ),
               ),
+              child: Column(children: <Widget>[
+                FrequentlyContacted(),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                    ),
+                  ),
+                )
+              ]),
             ),
           )
         ],
@@ -55,5 +66,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-// 15:08
