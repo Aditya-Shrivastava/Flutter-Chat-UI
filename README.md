@@ -1,6 +1,6 @@
-# chat_ui
+# Chat App UI
 
-A new Flutter project.
+![](chat-ui.gif)
 
 ## Getting Started
 
