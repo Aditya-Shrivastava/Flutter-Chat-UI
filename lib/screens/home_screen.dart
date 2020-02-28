@@ -1,5 +1,6 @@
 import 'package:chat_ui/widgets/category_selector.dart';
 import 'package:chat_ui/widgets/frequently_contacted.dart';
+import 'package:chat_ui/widgets/recent_chats.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -51,13 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               child: Column(children: <Widget>[
                 FrequentlyContacted(),
-                Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                    ),
-                  ),
-                )
+                RecentChats(),
               ]),
             ),
           )
